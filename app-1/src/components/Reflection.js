@@ -1,27 +1,56 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 export default class Reflection extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
     this.state = {
-        inputValue:""
+      inputValue:""
     }
-    this.displayInput = this.displayInput.bind(this);
+
+    this.handleInput = this.handleInput.bind(this);
   }
 
-  displayInput(event){
-      this.setState({inputValue:event.target.value})
+  handleInput(event){
+    this.setState({inputValue:event.target.value});
   }
 
   render() {
     return (
       <div>
-        <input onChange={this.displayInput}></input>
+        <input onChange={this.handleInput}></input>
         <p>{this.state.inputValue}</p>
       </div>
-    );
+    )
   }
 }
+
+
+
+
+// import React, { Component } from "react";
+
+// export default class Reflection extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//         inputValue:""
+//     }
+//     this.displayInput = this.displayInput.bind(this);
+//   }
+
+//   displayInput(event){
+//       this.setState({inputValue:event.target.value})
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <input onChange={this.displayInput}></input>
+//         <p>{this.state.inputValue}</p>
+//       </div>
+//     );
+//   }
+// }
 
 // import React, {useState}from 'react'
 
